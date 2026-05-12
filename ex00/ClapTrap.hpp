@@ -6,7 +6,7 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 01:57:01 by lgrigore          #+#    #+#             */
-/*   Updated: 2026/04/30 02:12:47 by lgrigore         ###   ########.fr       */
+/*   Updated: 2026/05/12 18:49:03 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ClapTrap {
   int attackDamage;
 
  public:
+ ClapTrap();
   ClapTrap(std::string name);
   ClapTrap(const ClapTrap& other);
   ~ClapTrap();

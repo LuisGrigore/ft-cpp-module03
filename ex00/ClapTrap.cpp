@@ -6,7 +6,7 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 01:58:31 by lgrigore          #+#    #+#             */
-/*   Updated: 2026/04/30 02:11:12 by lgrigore         ###   ########.fr       */
+/*   Updated: 2026/05/12 18:59:01 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,28 @@
 
 #include <iostream>
 
+ClapTrap::ClapTrap()
+    : name("Default"), hitPoints(10), energyPoints(10), attackDamage(0) {
+  std::cout << "ClapTrap " << name << " created!" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name)
-    : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {}
+    : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
+  std::cout << "ClapTrap " << name << " created!" << std::endl;
+}
 ClapTrap::ClapTrap(const ClapTrap& other)
     : name(other.name),
       hitPoints(other.hitPoints),
       energyPoints(other.energyPoints),
-      attackDamage(other.attackDamage) {}
-ClapTrap::~ClapTrap() {}
+      attackDamage(other.attackDamage) {
+  std::cout << "ClapTrap " << name << " copied!" << std::endl;
+}
+ClapTrap::~ClapTrap() {
+  std::cout << "ClapTrap " << name << " destroyed!" << std::endl;
+}
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
+  std::cout << "ClapTrap " << name << " assigned from " << other.name << "!"
+            << std::endl;
   if (this != &other) {
     name = other.name;
     hitPoints = other.hitPoints;
